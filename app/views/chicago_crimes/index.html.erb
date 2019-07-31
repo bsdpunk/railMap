@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Chicago Crimes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>P key</th>
+      <th>Case number</th>
+      <th>Date</th>
+      <th>Block</th>
+      <th>Iucr</th>
+      <th>Primary type</th>
+      <th>Description</th>
+      <th>Location description</th>
+      <th>Arrest</th>
+      <th>Domestic</th>
+      <th>Beat</th>
+      <th>District</th>
+      <th>Ward</th>
+      <th>Community area</th>
+      <th>Fbi code</th>
+      <th>X coordinate</th>
+      <th>Y coordinate</th>
+      <th>Year</th>
+      <th>Updated on</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chicago_crimes.each do |chicago_crime| %>
+      <tr>
+        <td><%= chicago_crime.p_key %></td>
+        <td><%= chicago_crime.case_number %></td>
+        <td><%= chicago_crime.date %></td>
+        <td><%= chicago_crime.block %></td>
+        <td><%= chicago_crime.iucr %></td>
+        <td><%= chicago_crime.primary_type %></td>
+        <td><%= chicago_crime.description %></td>
+        <td><%= chicago_crime.location_description %></td>
+        <td><%= chicago_crime.arrest %></td>
+        <td><%= chicago_crime.domestic %></td>
+        <td><%= chicago_crime.beat %></td>
+        <td><%= chicago_crime.district %></td>
+        <td><%= chicago_crime.ward %></td>
+        <td><%= chicago_crime.community_area %></td>
+        <td><%= chicago_crime.fbi_code %></td>
+        <td><%= chicago_crime.x_coordinate %></td>
+        <td><%= chicago_crime.y_coordinate %></td>
+        <td><%= chicago_crime.year %></td>
+        <td><%= chicago_crime.updated_on %></td>
+        <td><%= chicago_crime.latitude %></td>
+        <td><%= chicago_crime.longitude %></td>
+        <td><%= chicago_crime.location %></td>
+        <td><%= link_to 'Show', chicago_crime %></td>
+        <td><%= link_to 'Edit', edit_chicago_crime_path(chicago_crime) %></td>
+        <td><%= link_to 'Destroy', chicago_crime, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chicago Crime', new_chicago_crime_path %>

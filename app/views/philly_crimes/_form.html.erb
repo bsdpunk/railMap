@@ -1,0 +1,87 @@
+<%= form_with(model: philly_crime, local: true) do |form| %>
+  <% if philly_crime.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(philly_crime.errors.count, "error") %> prohibited this philly_crime from being saved:</h2>
+
+      <ul>
+      <% philly_crime.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dc_dist %>
+    <%= form.text_field :dc_dist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :psa %>
+    <%= form.text_field :psa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dispatch_date_time %>
+    <%= form.datetime_select :dispatch_date_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dispatch_date %>
+    <%= form.datetime_select :dispatch_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dispatch_time %>
+    <%= form.text_field :dispatch_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hour %>
+    <%= form.text_field :hour %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dc_key %>
+    <%= form.text_field :dc_key %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location_block %>
+    <%= form.text_field :location_block %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ucr_general %>
+    <%= form.text_field :ucr_general %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text_general_code %>
+    <%= form.text_field :text_general_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :police_districts %>
+    <%= form.text_field :police_districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :month %>
+    <%= form.text_field :month %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lon %>
+    <%= form.text_field :lon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lat %>
+    <%= form.text_field :lat %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dc_dist: 
+  psa: 
+  dispatch_date_time: 2019-07-16 22:08:02
+  dispatch_date: 2019-07-16 22:08:02
+  dispatch_time: MyString
+  hour: 
+  dc_key: 
+  location_block: MyString
+  ucr_general: 
+  text_general_code: MyString
+  police_districts: MyString
+  month: MyString
+  lon: 1.5
+  lat: 1.5
+
+two:
+  dc_dist: 
+  psa: 
+  dispatch_date_time: 2019-07-16 22:08:02
+  dispatch_date: 2019-07-16 22:08:02
+  dispatch_time: MyString
+  hour: 
+  dc_key: 
+  location_block: MyString
+  ucr_general: 
+  text_general_code: MyString
+  police_districts: MyString
+  month: MyString
+  lon: 1.5
+  lat: 1.5

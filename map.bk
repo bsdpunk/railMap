@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Map</h1>
+
+  <script>
+    var pcrimes = [
+    <% @philly_crimes.each do |philly_crime| %>
+    {
+      "dc_dist":"<%= philly_crime.dc_dist %>"</td>
+"psa": "<%= philly_crime.psa %>",
+"dispatch_date_time": "<%= philly_crime.dispatch_date_time %>",
+"dispatch_date": "<%= philly_crime.dispatch_date %>",
+"dispatch_time": "<%= philly_crime.dispatch_time %>",
+"hour": "<%= philly_crime.hour %>",
+"dc_key": "<%= philly_crime.dc_key %>",
+"location_block": "<%= philly_crime.location_block %>",
+"ucr_general": "<%= philly_crime.ucr_general %>",
+"text_general_code": "<%= philly_crime.text_general_code %>",
+"police_districts": "<%= philly_crime.police_districts %>",
+"month": "<%= philly_crime.month %>",
+"lon": "<%= philly_crime.lon %>",
+"lat": "<%= philly_crime.lat %>"
+},
+<% end %>
+  {}
+]
+  </script>
+
+<br>

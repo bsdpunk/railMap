@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @world_city.country %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @world_city.city %>
+</p>
+
+<p>
+  <strong>Accent city:</strong>
+  <%= @world_city.accent_city %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @world_city.region %>
+</p>
+
+<p>
+  <strong>Population:</strong>
+  <%= @world_city.population %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @world_city.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @world_city.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_world_city_path(@world_city) %> |
+<%= link_to 'Back', world_cities_path %>

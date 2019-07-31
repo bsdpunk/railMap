@@ -1,0 +1,2 @@
+json.extract! la_crime, :id, :dr_number, :date_reported, :date_occurred, :time_occurred, :area_id, :area_name, :reporting_district, :crime_code, :crime_code_description, :mo_codes, :victim_age, :victim_sex, :victim_descent, :premise_code, :premise_description, :weapon_used_code, :weapon_description, :status_code, :status_description, :crime_code1, :crime_code2, :crime_code3, :crime_code4, :address, :cross_street, :location, :created_at, :updated_at
+json.url la_crime_url(la_crime, format: :json)

@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Philly Crimes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dc dist</th>
+      <th>Psa</th>
+      <th>Dispatch date time</th>
+      <th>Dispatch date</th>
+      <th>Dispatch time</th>
+      <th>Hour</th>
+      <th>Dc key</th>
+      <th>Location block</th>
+      <th>Ucr general</th>
+      <th>Text general code</th>
+      <th>Police districts</th>
+      <th>Month</th>
+      <th>Lon</th>
+      <th>Lat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @philly_crimes.each do |philly_crime| %>
+      <tr>
+        <td><%= philly_crime.dc_dist %></td>
+        <td><%= philly_crime.psa %></td>
+        <td><%= philly_crime.dispatch_date_time %></td>
+        <td><%= philly_crime.dispatch_date %></td>
+        <td><%= philly_crime.dispatch_time %></td>
+        <td><%= philly_crime.hour %></td>
+        <td><%= philly_crime.dc_key %></td>
+        <td><%= philly_crime.location_block %></td>
+        <td><%= philly_crime.ucr_general %></td>
+        <td><%= philly_crime.text_general_code %></td>
+        <td><%= philly_crime.police_districts %></td>
+        <td><%= philly_crime.month %></td>
+        <td><%= philly_crime.lon %></td>
+        <td><%= philly_crime.lat %></td>
+        <td><%= link_to 'Show', philly_crime %></td>
+        <td><%= link_to 'Edit', edit_philly_crime_path(philly_crime) %></td>
+        <td><%= link_to 'Destroy', philly_crime, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= will_paginate @posts %>
+
+<%= link_to 'New Philly Crime', new_philly_crime_path %>

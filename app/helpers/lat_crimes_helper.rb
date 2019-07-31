@@ -1,0 +1,2 @@
+module LatCrimesHelper
+end

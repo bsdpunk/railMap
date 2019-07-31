@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dr_number: 
+  date_reported: 2019-07-11 15:00:41
+  date_occurred: 2019-07-11 15:00:41
+  time_occurred: MyString
+  area: one
+  area_name: MyString
+  reporting_district: 
+  crime_code: MyString
+  crime_code_description: MyString
+  mo_codes: MyString
+  victim_age: 1.5
+  victim_sex: MyString
+  victim_descent: MyString
+  premise_code: 1.5
+  premise_description: MyString
+  weapon_used_code: 1.5
+  weapon_description: MyString
+  status_code: MyString
+  status_description: MyString
+  crime_code1: 1.5
+  crime_code2: MyString
+  crime_code3: MyString
+  crime_code4: MyString
+  address: MyString
+  cross_street: MyString
+  location: MyString
+
+two:
+  dr_number: 
+  date_reported: 2019-07-11 15:00:41
+  date_occurred: 2019-07-11 15:00:41
+  time_occurred: MyString
+  area: two
+  area_name: MyString
+  reporting_district: 
+  crime_code: MyString
+  crime_code_description: MyString
+  mo_codes: MyString
+  victim_age: 1.5
+  victim_sex: MyString
+  victim_descent: MyString
+  premise_code: 1.5
+  premise_description: MyString
+  weapon_used_code: 1.5
+  weapon_description: MyString
+  status_code: MyString
+  status_description: MyString
+  crime_code1: 1.5
+  crime_code2: MyString
+  crime_code3: MyString
+  crime_code4: MyString
+  address: MyString
+  cross_street: MyString
+  location: MyString

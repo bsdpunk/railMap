@@ -1,0 +1,112 @@
+<%= form_with(model: denver_crime, local: true) do |form| %>
+  <% if denver_crime.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(denver_crime.errors.count, "error") %> prohibited this denver_crime from being saved:</h2>
+
+      <ul>
+      <% denver_crime.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :inc_id_ent_id %>
+    <%= form.text_field :inc_id_ent_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :offense_id %>
+    <%= form.text_field :offense_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :offensecode %>
+    <%= form.text_field :offensecode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :offensecodeextension %>
+    <%= form.check_box :offensecodeextension %>
+  </div>
+
+  <div class="field">
+    <%= form.label :offensetype_id %>
+    <%= form.text_field :offensetype_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :offensecategory_id %>
+    <%= form.text_field :offensecategory_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :firstoccurrencedate %>
+    <%= form.datetime_select :firstoccurrencedate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastoccurrencedate %>
+    <%= form.datetime_select :lastoccurrencedate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reporteddate %>
+    <%= form.datetime_select :reporteddate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inc_id_entaddress %>
+    <%= form.text_field :inc_id_entaddress %>
+  </div>
+
+  <div class="field">
+    <%= form.label :geox %>
+    <%= form.text_field :geox %>
+  </div>
+
+  <div class="field">
+    <%= form.label :geoy %>
+    <%= form.text_field :geoy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :geolon %>
+    <%= form.text_field :geolon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :geolat %>
+    <%= form.text_field :geolat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :district_id %>
+    <%= form.text_field :district_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precinct_id %>
+    <%= form.text_field :precinct_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :neighborhood_id %>
+    <%= form.text_field :neighborhood_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :iscrime %>
+    <%= form.check_box :iscrime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :istraffic %>
+    <%= form.check_box :istraffic %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

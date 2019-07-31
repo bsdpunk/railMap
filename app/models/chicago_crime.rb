@@ -1,0 +1,2 @@
+class ChicagoCrime < ApplicationRecord
+end

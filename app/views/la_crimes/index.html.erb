@@ -1,0 +1,77 @@
+<p id="notice"><%= notice %></p>
+
+<h1>La Crimes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dr number</th>
+      <th>Date reported</th>
+      <th>Date occurred</th>
+      <th>Time occurred</th>
+      <th>Area</th>
+      <th>Area name</th>
+      <th>Reporting district</th>
+      <th>Crime code</th>
+      <th>Crime code description</th>
+      <th>Mo codes</th>
+      <th>Victim age</th>
+      <th>Victim sex</th>
+      <th>Victim descent</th>
+      <th>Premise code</th>
+      <th>Premise description</th>
+      <th>Weapon used code</th>
+      <th>Weapon description</th>
+      <th>Status code</th>
+      <th>Status description</th>
+      <th>Crime code1</th>
+      <th>Crime code2</th>
+      <th>Crime code3</th>
+      <th>Crime code4</th>
+      <th>Address</th>
+      <th>Cross street</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @la_crimes.each do |la_crime| %>
+      <tr>
+        <td><%= la_crime.dr_number %></td>
+        <td><%= la_crime.date_reported %></td>
+        <td><%= la_crime.date_occurred %></td>
+        <td><%= la_crime.time_occurred %></td>
+        <td><%= la_crime.area %></td>
+        <td><%= la_crime.area_name %></td>
+        <td><%= la_crime.reporting_district %></td>
+        <td><%= la_crime.crime_code %></td>
+        <td><%= la_crime.crime_code_description %></td>
+        <td><%= la_crime.mo_codes %></td>
+        <td><%= la_crime.victim_age %></td>
+        <td><%= la_crime.victim_sex %></td>
+        <td><%= la_crime.victim_descent %></td>
+        <td><%= la_crime.premise_code %></td>
+        <td><%= la_crime.premise_description %></td>
+        <td><%= la_crime.weapon_used_code %></td>
+        <td><%= la_crime.weapon_description %></td>
+        <td><%= la_crime.status_code %></td>
+        <td><%= la_crime.status_description %></td>
+        <td><%= la_crime.crime_code1 %></td>
+        <td><%= la_crime.crime_code2 %></td>
+        <td><%= la_crime.crime_code3 %></td>
+        <td><%= la_crime.crime_code4 %></td>
+        <td><%= la_crime.address %></td>
+        <td><%= la_crime.cross_street %></td>
+        <td><%= la_crime.location %></td>
+        <td><%= link_to 'Show', la_crime %></td>
+        <td><%= link_to 'Edit', edit_la_crime_path(la_crime) %></td>
+        <td><%= link_to 'Destroy', la_crime, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New La Crime', new_la_crime_path %>

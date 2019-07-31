@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Chicago2008 Crimes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>P key</th>
+      <th>Case number</th>
+      <th>Date</th>
+      <th>Block</th>
+      <th>Iucr</th>
+      <th>Primary type</th>
+      <th>Description</th>
+      <th>Location description</th>
+      <th>Arrest</th>
+      <th>Domestic</th>
+      <th>Beat</th>
+      <th>District</th>
+      <th>Ward</th>
+      <th>Community area</th>
+      <th>Fbi code</th>
+      <th>X coordinate</th>
+      <th>Y coordinate</th>
+      <th>Year</th>
+      <th>Updated on</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chicago2008_crimes.each do |chicago2008_crime| %>
+      <tr>
+        <td><%= chicago2008_crime.p_key %></td>
+        <td><%= chicago2008_crime.case_number %></td>
+        <td><%= chicago2008_crime.date %></td>
+        <td><%= chicago2008_crime.block %></td>
+        <td><%= chicago2008_crime.iucr %></td>
+        <td><%= chicago2008_crime.primary_type %></td>
+        <td><%= chicago2008_crime.description %></td>
+        <td><%= chicago2008_crime.location_description %></td>
+        <td><%= chicago2008_crime.arrest %></td>
+        <td><%= chicago2008_crime.domestic %></td>
+        <td><%= chicago2008_crime.beat %></td>
+        <td><%= chicago2008_crime.district %></td>
+        <td><%= chicago2008_crime.ward %></td>
+        <td><%= chicago2008_crime.community_area %></td>
+        <td><%= chicago2008_crime.fbi_code %></td>
+        <td><%= chicago2008_crime.x_coordinate %></td>
+        <td><%= chicago2008_crime.y_coordinate %></td>
+        <td><%= chicago2008_crime.year %></td>
+        <td><%= chicago2008_crime.updated_on %></td>
+        <td><%= chicago2008_crime.latitude %></td>
+        <td><%= chicago2008_crime.longitude %></td>
+        <td><%= chicago2008_crime.location %></td>
+        <td><%= link_to 'Show', chicago2008_crime %></td>
+        <td><%= link_to 'Edit', edit_chicago2008_crime_path(chicago2008_crime) %></td>
+        <td><%= link_to 'Destroy', chicago2008_crime, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chicago2008 Crime', new_chicago2008_crime_path %>

@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Denver Crimes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Inc id ent</th>
+      <th>Offense</th>
+      <th>Offensecode</th>
+      <th>Offensecodeextension</th>
+      <th>Offensetype</th>
+      <th>Offensecategory</th>
+      <th>Firstoccurrencedate</th>
+      <th>Lastoccurrencedate</th>
+      <th>Reporteddate</th>
+      <th>Inc id entaddress</th>
+      <th>Geox</th>
+      <th>Geoy</th>
+      <th>Geolon</th>
+      <th>Geolat</th>
+      <th>District</th>
+      <th>Precinct</th>
+      <th>Neighborhood</th>
+      <th>Iscrime</th>
+      <th>Istraffic</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @denver_crimes.each do |denver_crime| %>
+      <tr>
+        <td><%= denver_crime.inc_id_ent_id %></td>
+        <td><%= denver_crime.offense_id %></td>
+        <td><%= denver_crime.offensecode %></td>
+        <td><%= denver_crime.offensecodeextension %></td>
+        <td><%= denver_crime.offensetype_id %></td>
+        <td><%= denver_crime.offensecategory_id %></td>
+        <td><%= denver_crime.firstoccurrencedate %></td>
+        <td><%= denver_crime.lastoccurrencedate %></td>
+        <td><%= denver_crime.reporteddate %></td>
+        <td><%= denver_crime.inc_id_entaddress %></td>
+        <td><%= denver_crime.geox %></td>
+        <td><%= denver_crime.geoy %></td>
+        <td><%= denver_crime.geolon %></td>
+        <td><%= denver_crime.geolat %></td>
+        <td><%= denver_crime.district_id %></td>
+        <td><%= denver_crime.precinct_id %></td>
+        <td><%= denver_crime.neighborhood_id %></td>
+        <td><%= denver_crime.iscrime %></td>
+        <td><%= denver_crime.istraffic %></td>
+        <td><%= link_to 'Show', denver_crime %></td>
+        <td><%= link_to 'Edit', edit_denver_crime_path(denver_crime) %></td>
+        <td><%= link_to 'Destroy', denver_crime, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= will_paginate @denver_crimes %>
+<%= link_to 'New Denver Crime', new_denver_crime_path %>

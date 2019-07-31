@@ -1,0 +1,2 @@
+class PhillyCrime < ApplicationRecord
+end

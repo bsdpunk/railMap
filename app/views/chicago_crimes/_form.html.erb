@@ -1,0 +1,127 @@
+<%= form_with(model: chicago_crime, local: true) do |form| %>
+  <% if chicago_crime.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(chicago_crime.errors.count, "error") %> prohibited this chicago_crime from being saved:</h2>
+
+      <ul>
+      <% chicago_crime.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :p_key %>
+    <%= form.text_field :p_key %>
+  </div>
+
+  <div class="field">
+    <%= form.label :case_number %>
+    <%= form.text_field :case_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.datetime_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :block %>
+    <%= form.text_field :block %>
+  </div>
+
+  <div class="field">
+    <%= form.label :iucr %>
+    <%= form.text_field :iucr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :primary_type %>
+    <%= form.text_field :primary_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location_description %>
+    <%= form.text_field :location_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :arrest %>
+    <%= form.check_box :arrest %>
+  </div>
+
+  <div class="field">
+    <%= form.label :domestic %>
+    <%= form.check_box :domestic %>
+  </div>
+
+  <div class="field">
+    <%= form.label :beat %>
+    <%= form.text_field :beat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :district %>
+    <%= form.text_field :district %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ward %>
+    <%= form.text_field :ward %>
+  </div>
+
+  <div class="field">
+    <%= form.label :community_area %>
+    <%= form.text_field :community_area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fbi_code %>
+    <%= form.text_field :fbi_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :x_coordinate %>
+    <%= form.text_field :x_coordinate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :y_coordinate %>
+    <%= form.text_field :y_coordinate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.text_field :year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :updated_on %>
+    <%= form.datetime_select :updated_on %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

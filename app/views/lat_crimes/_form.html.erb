@@ -1,0 +1,152 @@
+<%= form_with(model: lat_crime, local: true) do |form| %>
+  <% if lat_crime.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lat_crime.errors.count, "error") %> prohibited this lat_crime from being saved:</h2>
+
+      <ul>
+      <% lat_crime.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dr_number %>
+    <%= form.text_field :dr_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_reported %>
+    <%= form.datetime_select :date_reported %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_occurred %>
+    <%= form.datetime_select :date_occurred %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_occurred %>
+    <%= form.text_field :time_occurred %>
+  </div>
+
+  <div class="field">
+    <%= form.label :area_id %>
+    <%= form.text_field :area_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :area_name %>
+    <%= form.text_field :area_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reporting_district %>
+    <%= form.text_field :reporting_district %>
+  </div>
+
+  <div class="field">
+    <%= form.label :crime_code %>
+    <%= form.text_field :crime_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :crime_code_description %>
+    <%= form.text_field :crime_code_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mo_codes %>
+    <%= form.text_field :mo_codes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :victim_age %>
+    <%= form.text_field :victim_age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :victim_sex %>
+    <%= form.text_field :victim_sex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :victim_descent %>
+    <%= form.text_field :victim_descent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :premise_code %>
+    <%= form.text_field :premise_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :premise_description %>
+    <%= form.text_field :premise_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weapon_used_code %>
+    <%= form.text_field :weapon_used_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weapon_description %>
+    <%= form.text_field :weapon_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status_code %>
+    <%= form.text_field :status_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status_description %>
+    <%= form.text_field :status_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :crime_code1 %>
+    <%= form.text_field :crime_code1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :crime_code2 %>
+    <%= form.text_field :crime_code2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :crime_code3 %>
+    <%= form.text_field :crime_code3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :crime_code4 %>
+    <%= form.text_field :crime_code4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cross_street %>
+    <%= form.text_field :cross_street %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lat %>
+    <%= form.text_field :lat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lon %>
+    <%= form.text_field :lon %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
